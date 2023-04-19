@@ -1,0 +1,263 @@
+.chooseRoundsContainer,
+.scoreContainer,
+.roundsContainer,
+.arena {
+  display: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.scoreContainer {
+  padding-top: 20px;
+}
+
+body,
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #1e293b;
+}
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: #1e293b;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.weaponContainer h1 {
+  padding-bottom: 35px;
+}
+h1,
+p {
+  color: white;
+}
+
+.rematchContainer {
+  display: none;
+  color: black;
+}
+
+.rematchContainer p {
+  color: black;
+}
+
+.introContainer h1,
+.scoreContainer h1 {
+  font-style: italic;
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.roundsContainer {
+  background-color: black;
+  height: 100px;
+  margin-top: 50px;
+}
+
+#playBtn {
+  align-self: flex-start;
+  animation: playBtn-opacity 2s ease forwards;
+  animation-delay: 2s;
+  visibility: hidden;
+}
+
+#playAgain {
+  display: none;
+  animation: slide-in-left 0.5s ease forwards;
+  animation-delay: 3.5s;
+  visibility: hidden;
+  margin: auto;
+  border-color: white;
+}
+
+.tryAgainContainer {
+  display: none;
+}
+#playBtn,
+#roundOption1,
+#roundOption2,
+#roundOption3,
+#roundOption4,
+#playAgain,
+#chooseRoundsBtn {
+  background-color: #e879f9;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  border-width: 0px;
+  background-image: linear-gradient(to right, #e879f9, white);
+  transition: background-position 1s ease;
+  background-size: 200% 100%;
+}
+
+#playBtn:hover,
+#roundOption1:hover,
+#roundOption2:hover,
+#roundOption3:hover,
+#roundOption4:hover,
+#playAgain:hover,
+#chooseRoundsBtn:hover {
+  background-position: -100% 0;
+}
+.scoreContainer .scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreContainer {
+  background-color: #38bdf8;
+}
+
+.roundsContainer p {
+  margin: 0px;
+  line-height: 100px;
+}
+
+.arena {
+  background-color: #e879f9;
+  height: 350px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: none;
+}
+
+.arena h1 {
+  margin: 0px;
+}
+
+#yourChoice,
+#computerChoice {
+  display: none;
+}
+
+#yourChoice {
+  padding-right: 50px;
+  animation: slide-in-left 0.5s ease forwards;
+  animation-delay: 0.5s;
+  visibility: hidden;
+}
+
+#computerChoice {
+  animation: slide-in-right 0.5s ease forwards;
+  animation-delay: 1.5s;
+  visibility: hidden;
+}
+
+.roundChoices {
+  display: flex;
+  justify-content: space-between;
+}
+
+#roundWinner {
+  text-align: center;
+  animation: spin 0.5s linear forwards;
+  animation-delay: 3s;
+  visibility: hidden;
+  display: none;
+}
+
+/* animations */
+.introContainer h1 {
+  animation: slide-in-left 0.5s ease forwards;
+  animation-delay: 1s;
+  visibility: hidden;
+}
+
+.introContainer p {
+  animation: slide-in-left 0.5s ease forwards;
+  animation-delay: 1.5s;
+  visibility: hidden;
+}
+
+.chooseRoundsContainer h1 {
+  animation: slide-in-left 0.5s ease forwards;
+}
+.chooseRoundsContainer .roundOptions {
+  animation: slide-in-right 0.5s ease forwards;
+}
+
+#rock,
+#paper,
+#scissors {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* animations */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes playBtn-opacity {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: visible;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: #e879f9;
+  }
+  100% {
+    background-color: lightgray;
+  }
+}
+
+@keyframes score-stand-out {
+  0% {
+    opacity: 0%;
+    color: white;
+  }
+
+  100% {
+    opacity: 100%;
+    color: black;
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock-Paper-Scissor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="introContainer">
+        <h1>
+          <span>Rock,</span>
+          <span>Paper,</span>
+          <span>Scissors</span>
+        </h1>
+
+        <p>Can you beat a computer in this epic batter of human vs computer?</p>
+        <button id="playBtn">Play</button>
+      </div>
+
+      <div class="chooseRoundsContainer">
+        <h1>How many rounds would you like to play?</h1>
+        <div class="roundOptions">
+          <button id="roundOption1">3</button>
+          <button id="roundOption2">5</button>
+          <button id="roundOption3">7</button>
+          <button id="roundOption4">10</button>
+        </div>
+      </div>
+
+      <!-- scores -->
+      <div class="scoreContainer">
+        <h1>
+          <span>Rock,</span>
+          <span>Paper,</span>
+          <span>Scissors</span>
+        </h1>
+
+        <div class="scores">
+          <div>
+            <h2>Player</h2>
+            <p id="playerScore">Score: 0</p>
+          </div>
+          <div>
+            <h2>Computer</h2>
+            <p id="computerScore">Score: 0</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- rounds -->
+      <div class="roundsContainer">
+        <p id="rounds"></p>
+      </div>
+
+      <!-- arena -->
+      <div class="arena">
+        <div class="weaponContainer">
+          <h1>Choose your weapon</h1>
+
+          <button id="rock">Rock</button>
+          <button id="paper">Paper</button>
+          <button id="scissors">Scissors</button>
+        </div>
+
+        <div class="roundResults">
+          <div class="roundChoices">
+            <p id="yourChoice">Your Choice</p>
+            <p id="computerChoice">Computer Choice</p>
+          </div>
+          <h2 id="roundWinner">Winner:</h2>
+          <button id="playAgain">Play Again!</button>
+        </div>
+        <div class="tryAgainContainer">
+          <h2>Want to play again?</h2>
+          <button id="chooseRoundsBtn">Choose Rounds</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+
+  <!-- Round Results -->
+</html>
